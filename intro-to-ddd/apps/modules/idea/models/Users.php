@@ -17,8 +17,9 @@ class Users extends Model
     {
         $this->hasMany(
             'id',
-            'Ideas',
-            'user_id'
+            'Phalcon\RateIdea\Models\Ideas',
+            'user_id',
+            ["alias" => "ideas"]
         );
     }
 

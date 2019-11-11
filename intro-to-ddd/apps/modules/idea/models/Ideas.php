@@ -11,6 +11,7 @@ class Ideas extends Model
     private $description;
     private $votes;
     private $rating;
+    private $user_id;
     private $created_at;
     private $updated_at;
 
@@ -18,8 +19,9 @@ class Ideas extends Model
     {
         $this->belongsTo(
             'user_id',
-            'Users',
-            'id'
+            'Phalcon\RateIdea\Models\Users',
+            'id',
+            ["alias" => "user"]
         );
     }
     
